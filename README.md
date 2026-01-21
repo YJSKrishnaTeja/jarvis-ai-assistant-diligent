@@ -1,10 +1,14 @@
-# 🤖 Jarvis AI Assistant
+# 🤖 Jarvis – Personal AI Assistant for Enterprise SaaS
 
 A powerful personal AI assistant powered by self-hosted LLM (LLaMA) and Pinecone vector database, featuring conversational interface and contextual knowledge retrieval using RAG (Retrieval Augmented Generation).
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.109-green.svg)](https://fastapi.tiangolo.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+## 📸 Demo Screenshot
+
+![Jarvis Demo](docs/images/image.png)
 
 ## 🎯 Overview
 
@@ -16,6 +20,7 @@ Jarvis is an enterprise-grade AI assistant that combines:
 - **RESTful API** for easy integration
 
 ## ✨ Features
+“Jarvis uses a fully self-hosted LLM (LLaMA via Ollama) ensuring data privacy and enterprise compliance.”
 
 ### Core Capabilities
 - 💬 **Conversational AI**: Natural language processing with LLaMA
@@ -67,6 +72,8 @@ Jarvis is an enterprise-grade AI assistant that combines:
 - pip (Python package manager)
 - (Optional) Docker and Docker Compose
 - (Optional) Ollama for local LLaMA
+
+
 
 ### Installation
 
