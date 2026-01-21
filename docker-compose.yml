@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  jarvis-backend:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - PINECONE_API_KEY=${PINECONE_API_KEY}
+      - PINECONE_INDEX_NAME=${PINECONE_INDEX_NAME:-jarvis-knowledge}
+      - PINECONE_REGION=${PINECONE_REGION:-us-east-1}
+      - OLLAMA_URL=${OLLAMA_URL:-http://ollama:11434}
+      - LLM_MODEL=${LLM_MODEL:-llama2}
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - ollama
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    command: serve
+
+volumes:
+  ollama_data:
